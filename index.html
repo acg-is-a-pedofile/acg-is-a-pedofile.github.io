@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <header>
+        <h1>Image Gallery</h1>
+        <p>A collection of beautiful images</p>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <input type="file" id="imageInput" accept="image/*" multiple>
+            <label for="imageInput" class="upload-btn">Upload Images</label>
+        </section>
+
+        <section class="gallery-container">
+            <div class="gallery" id="gallery">
+                <!-- Sample images will be loaded here -->
+                <div class="image-item">
+                    <img src="https://picsum.photos/400/300?random=1" alt="Sample Image 1" onclick="openModal(this)">
+                </div>
+                <div class="image-item">
+                    <img src="https://picsum.photos/400/300?random=2" alt="Sample Image 2" onclick="openModal(this)">
+                </div>
+                <div class="image-item">
+                    <img src="https://picsum.photos/400/300?random=3" alt="Sample Image 3" onclick="openModal(this)">
+                </div>
+                <div class="image-item">
+                    <img src="https://picsum.photos/400/300?random=4" alt="Sample Image 4" onclick="openModal(this)">
+                </div>
+                <div class="image-item">
+                    <img src="https://picsum.photos/400/300?random=5" alt="Sample Image 5" onclick="openModal(this)">
+                </div>
+                <div class="image-item">
+                    <img src="https://picsum.photos/400/300?random=6" alt="Sample Image 6" onclick="openModal(this)">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for full-size image viewing -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption" id="modalCaption"></div>
+        <button class="nav-btn prev" onclick="prevImage(event)">&lt;</button>
+        <button class="nav-btn next" onclick="nextImage(event)">&gt;</button>
+    </div>
+
+    <footer>
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-column">
+                    <h3>Aliases</h3>
+                    <ul>
+                        <li>PhotoGallery</li>
+                        <li>ImageViewer</li>
+                        <li>PicDisplay</li>
+                        <li>VisualCollection</li>
+                    </ul>
+                </div>
+
+                <div class="contact-column">
+                    <h3>Contact Information</h3>
+                    <div class="contact-info">
+                        <p><strong>Email:</strong> contact@imagegallery.com</p>
+                        <p><strong>Phone:</strong> (555) 123-4567</p>
+                        <p><strong>Website:</strong> www.imagegallery.com</p>
+                        <p><strong>Social:</strong> @imagegallery</p>
+                    </div>
+                </div>
+
+                <div class="contact-column">
+                    <h3>Mailing Address</h3>
+                    <div class="po-box">
+                        <p><strong>P.O. Box 12345</strong></p>
+                        <p>Image Gallery Services</p>
+                        <p>123 Photography Lane</p>
+                        <p>Visual City, VC 12345</p>
+                        <p>United States</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Image Gallery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="src/gallery.js"></script>
+</body>
+</html>
